@@ -14,6 +14,10 @@ router.get('/todos', async (req, res)=>{
         toods:[],
       });
     }
+    return res.status(200).json({
+      success:true,
+      todos,
+    });
   } catch (error) {
     return res.status(400).json({
       success:false,
